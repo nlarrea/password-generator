@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #E0E1DD;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.elements-wrapper {
+    width: 80%;
+    height: 80%;
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: rgba(13, 27, 42, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(109, 89, 122, 0.3);
+}
+
+h1 {
+    width: auto;
+    height: auto;
+    padding: 0.5em 1em;
+
+    font-family: 'Hack', monospace;
+    color: #778DA9;
+
+    border-bottom: 2px solid #415A77;
+}
+
+.user-input-wrapper {
+    width: fit-content;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.user-input-wrapper > .char-number {
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-input-wrapper > .options-wrapper {
+    width: 100%;
+    margin: 5px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+.user-input-wrapper > .options-wrapper > p {
+    width: 100%;
+
+    text-align: left;
+}
+
+/* .user-input-wrapper > .options-wrapper > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+
+.user-input-wrapper > .options-wrapper > ul > li {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* PASSWORD DISPLAY STYLES */
+
+.password-display {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    position: relative;
+}
+
+.password-display > button {
+    position: absolute;
+
+    right: -50px;
+}
