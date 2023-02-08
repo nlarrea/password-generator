@@ -10,7 +10,7 @@ This is a simple password generator that will help you generate a *strong passwo
 
 ## How to use
 
-1. Go to the [password generator]() website.
+1. Go to the [password generator](https://nlarrea.github.io/password-generator/) website.
 2. Enter the number of characters you want your password to be (***remember:** between 8 and 20*).
 3. Click on the **Generate Password** button.
 
