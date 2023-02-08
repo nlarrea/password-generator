@@ -1,0 +1,137 @@
+/* CHECKBOX STYLES */
+
+.cbx-container input {
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.cbx-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #d8d8d89a;
+}
+
+.line {
+    width: calc(100% - 4px);
+    height: 2px;
+    background-color: #3a3a3a;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: 0.7s transform cubic-bezier(0, 1, 0.33, 1.2), background 0.4s;
+}
+
+.line-indicator {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.cbx-container input:checked ~ .line-indicator {
+    transform: translateY(-50%);
+}
+
+/* INPUTS */
+
+/* hide arrows:
+Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* hide arrows:
+Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input {
+    padding: 5px;
+    outline: none;
+    
+    color: #778DA9;
+    text-align: center;
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 2px solid #415A77;
+}
+
+input[type="number"]:focus, input[type="number"]:active {
+    outline: none;
+    border-bottom: 2px solid #E0E1DD;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    width: 30ch;
+    padding: 10px;
+
+    font-family: 'Hack', monospace;
+    font-weight: 300;
+    letter-spacing: 1px;
+    
+    color: #E0E1DD;
+    background-color: #1B263B;
+    
+    border-color: #415A77;
+    border-radius: 8px;
+}
+
+/* COPY BUTTON */
+
+.copy-password {
+    width: 41px;
+    height: 100%;
+    padding: 0 auto;
+
+    background-color: #1B263B;
+    
+    border: 1px solid #415A77;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.copy-password > i {
+    color: #415A77;
+}
+
+.copy-password:hover, .copy-password:focus {
+    outline: none;
+    background-color: #415A77;
+}
+
+.copy-password:hover > i, .copy-password:focus > i {
+    color: #1B263B;
+}
+
+/* CREATE PASSWORD BUTTON */
+
+.random-password {
+    padding: 15px 20px;
+    font-weight: 700;
+    
+    color: #1B263B;
+    background-color: #778DA9;
+    
+    border: none;
+    border-bottom: 2px solid #415A77;
+    border-radius: 8px;
+    
+    cursor: pointer;
+}
+
+.random-password:hover {
+    background-color: #415A77;
+    border-bottom: 2px solid #778DA9;
+}
