@@ -18,6 +18,9 @@ charNumber.addEventListener("change", () => {
 
 
 btnCopy.addEventListener("click", () => {
+    displayPassword.select();
+    displayPassword.setSelectionRange(0, 99999);
+    
     // copy the password to clipboard
     navigator.clipboard.writeText(displayPassword.value);
 
