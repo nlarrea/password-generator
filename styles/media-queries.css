@@ -1,0 +1,33 @@
+@media (max-width: 700px) {
+    .elements-wrapper {
+        /* height: 90%; */
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    h1 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .user-input-wrapper > .char-number {
+        width: 80%;
+        margin-bottom: 15px;
+        flex-direction: column;
+        gap: 0;
+
+        text-align: center;
+    }
+
+    .user-input-wrapper > .options-wrapper {
+        width: 80%;
+    }
+
+    .user-input-wrapper > .options-wrapper > p {
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 28ch;
+    }
+}
