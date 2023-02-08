@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0f3793b933.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/items.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="elements-wrapper">
+            <h1>Password Generator</h1>
+
+            <div class="user-input-wrapper">
+                <div class="char-number">
+                    <label>How many characters do you want the password to be?</label>
+                    <input id="number-chars" type="number" value="8" min="8" max="20" placeholder="8 - 20" required step="1"/>
+                </div>
+
+                <div class="options-wrapper">
+                    <p>Do you want the password to be able to have ...</p>
+
+                    <ul>
+                        <li>
+                            <label class="cbx-container" for="has-uppercase">
+                                <input type="checkbox" name="upper" id="has-uppercase" checked="checkbox"/>
+                                <div class="line"></div>
+                                <div class="line line-indicator"></div>
+                            </label>
+                            <label for="has-uppercase">... capital letters?</label>    
+                        </li>
+                        <li>
+                            <label class="cbx-container">
+                                <input type="checkbox" name="numbers" id="has-numbers" checked="checked"/>
+                                <div class="line"></div>
+                                <div class="line line-indicator"></div>
+                            </label>
+                            <label for="has-numbers">... numbers?</label>
+                        </li>
+                        <li>
+                            <label class="cbx-container">
+                                <input type="checkbox" name="upper" id="has-symbols" checked="checked"/>
+                                <div class="line"></div>
+                                <div class="line line-indicator"></div>
+                            </label>
+                            <label for="has-symbols">... symbols?</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="password-display">
+                <input type="text" name="generated-password" id="generated-password" readonly maxlength="20" placeholder="Generated password"/>
+                <button class="copy-password">
+                    <i class="fa-solid fa-clone"></i>
+                </button>
+            </div>
+            
+            <button class="random-password">Random password</button>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
