@@ -80,12 +80,6 @@ h1 {
     text-align: left;
 }
 
-/* .user-input-wrapper > .options-wrapper > ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-} */
-
 .user-input-wrapper > .options-wrapper > ul > li {
     list-style: none;
 

@@ -87,12 +87,18 @@ input[type="text"] {
     border-radius: 8px;
 }
 
+#generated-password::selection {
+    color: #0d1b2a;
+    background-color: #e0e1dd;
+}
+
 /* COPY BUTTON */
 
 .copy-password {
     width: 41px;
     height: 100%;
     padding: 0 auto;
+    display: block;
 
     background-color: #1B263B;
     
@@ -134,4 +140,32 @@ input[type="text"] {
 .random-password:hover {
     background-color: #415A77;
     border-bottom: 2px solid #778DA9;
+}
+
+/* TOOLTIP */
+
+tool-tip {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+
+    box-shadow: 0 0 10px #000000;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
+
+    top: -40px;
+    right: -60px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+:has(> tool-tip) {
+    position: relative;
+}
+
+:has(> tool-tip):hover tool-tip {
+    opacity: 1;
 }

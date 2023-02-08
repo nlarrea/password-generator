@@ -30,4 +30,8 @@
     input[type="text"] {
         width: 28ch;
     }
+
+    tool-tip, .copy-password {
+        display: none;
+    }
 }

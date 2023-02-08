@@ -1,5 +1,6 @@
 const charNumber = document.querySelector("#number-chars");
 const displayPassword = document.querySelector("#generated-password");
+const tooltip = document.querySelector("tool-tip");
 
 const btnRandom = document.querySelector(".random-password");
 const btnCopy = document.querySelector(".copy-password");
@@ -23,9 +24,11 @@ btnCopy.addEventListener("click", () => {
     
     // copy the password to clipboard
     navigator.clipboard.writeText(displayPassword.value);
+    tooltip.innerHTML = "Copied!";
 
-    // alert the copied text
-    alert(`Copied the password: ${displayPassword.value}`);
+    setTimeout(() => {
+        tooltip.innerHTML = "To copy!";
+    }, 2000)
 });
 
 
