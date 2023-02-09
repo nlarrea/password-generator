@@ -6,6 +6,7 @@ const btnRandom = document.querySelector(".random-password");
 const btnCopy = document.querySelector(".copy-password");
 
 
+// set min and max values to the number of chars input
 charNumber.addEventListener("change", () => {
     let val = parseInt(charNumber.value);
     let max = charNumber.max;
@@ -19,6 +20,7 @@ charNumber.addEventListener("change", () => {
 
 
 btnCopy.addEventListener("click", () => {
+    // to copy from mobile phone devices
     displayPassword.select();
     displayPassword.setSelectionRange(0, 99999);
     
@@ -26,6 +28,7 @@ btnCopy.addEventListener("click", () => {
     navigator.clipboard.writeText(displayPassword.value);
     tooltip.innerHTML = "Copied!";
 
+    // hold the 'Copied!' message for 2sec, then change it back to 'To copy!'
     setTimeout(() => {
         tooltip.innerHTML = "To copy!";
     }, 2000)
@@ -49,7 +52,7 @@ btnRandom.addEventListener("click", () => {
     if(hasSymbols.checked) choices += symbols;
 
     let password = "";
-    for(let i=0; i<charNumber.value; i++){
+    for(let i=0; i < charNumber.value; i++){
         password += choices[Math.floor(Math.random() * choices.length)];
     }
 
