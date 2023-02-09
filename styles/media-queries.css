@@ -1,4 +1,4 @@
-@media (max-width: 700px) {
+@media (max-width: 700px) and (orientation: portrait) {
     .elements-wrapper {
         /* height: 90%; */
         width: 90%;
