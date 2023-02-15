@@ -7,7 +7,7 @@ const btnCopy = document.querySelector(".copy-password");
 
 
 // set min and max values to the number of chars input
-charNumber.addEventListener("change", () => {
+function setMinMaxValue(charNumber){
     let val = parseInt(charNumber.value);
     let max = charNumber.max;
     let min = charNumber.min;
@@ -16,6 +16,12 @@ charNumber.addEventListener("change", () => {
     else if(val < min) charNumber.value = min;
 
     charNumber.value = Math.floor(charNumber.value);
+}
+
+
+// when value changes, check if it's correct and correct if necesary
+charNumber.addEventListener("change", () => {
+    setMinMaxValue(charNumber)
 })
 
 
@@ -44,6 +50,9 @@ btnRandom.addEventListener("click", () => {
     const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numbers = "0123456789";
     const symbols = "@#$%^&*/=+?-_";
+
+    // check if char number is out of range and correct it if necesary
+    setMinMaxValue(charNumber);
 
     let choices = lowerCase;
 
